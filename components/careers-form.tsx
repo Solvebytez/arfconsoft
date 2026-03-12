@@ -49,16 +49,31 @@ const formSchema = z.object({
     { message: "Please enter a valid URL" }
   ),
   coverLetter: z.string().optional(),
-  resume: z.instanceof(FileList)
-    .refine((files) => files.length > 0, "Resume is required")
+  resume: z.any()
     .refine(
-      (files) => files[0]?.size <= 5 * 1024 * 1024,
+      (files) => {
+        if (typeof window === "undefined") return true // Skip during SSR
+        if (!files || !(files instanceof FileList) || files.length === 0) return false
+        return true
+      },
+      "Resume is required"
+    )
+    .refine(
+      (files) => {
+        if (typeof window === "undefined") return true // Skip during SSR
+        if (!files || !(files instanceof FileList) || files.length === 0) return true
+        return files[0]?.size <= 5 * 1024 * 1024
+      },
       "File size must be less than 5MB"
     )
     .refine(
-      (files) => [".pdf", ".doc", ".docx"].some((ext) =>
-        files[0]?.name.toLowerCase().endsWith(ext)
-      ),
+      (files) => {
+        if (typeof window === "undefined") return true // Skip during SSR
+        if (!files || !(files instanceof FileList) || files.length === 0) return true
+        return [".pdf", ".doc", ".docx"].some((ext) =>
+          files[0]?.name.toLowerCase().endsWith(ext)
+        )
+      },
       "Only PDF, DOC, and DOCX files are allowed"
     ),
 })
