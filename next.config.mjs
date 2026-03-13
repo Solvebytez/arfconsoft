@@ -25,17 +25,6 @@ const nextConfig = {
       '@radix-ui/react-tooltip',
     ],
   },
-  // Webpack optimizations
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      // Optimize client-side bundle
-      config.optimization = {
-        ...config.optimization,
-        moduleIds: 'deterministic',
-      }
-    }
-    return config
-  },
 }
 
 export default nextConfig
