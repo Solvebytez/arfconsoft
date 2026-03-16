@@ -40,7 +40,11 @@ const formSchema = z.object({
 
 type FormValues = z.infer<typeof formSchema>
 
-export function ContactForm() {
+interface ContactFormProps {
+  onSuccess?: () => void
+}
+
+export function ContactForm({ onSuccess }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
 
   const form = useForm<FormValues>({
@@ -80,6 +84,9 @@ export function ContactForm() {
 
       toast.success("Message sent successfully! We'll get back to you within 24 hours.")
       form.reset()
+      if (onSuccess) {
+        onSuccess()
+      }
     } catch (error) {
       console.error("Error submitting form:", error)
       toast.error(

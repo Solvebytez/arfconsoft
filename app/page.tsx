@@ -11,6 +11,7 @@ import { CodeEditorTyping } from "@/components/code-editor-typing"
 import SiteLoader from "@/components/site-loader"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { ContactModal } from "@/components/contact-modal"
 import { motion } from "framer-motion"
 
 function FAQItem({ question, answer, index }: { question: string; answer: string; index: number }) {
@@ -58,6 +59,8 @@ function FAQItem({ question, answer, index }: { question: string; answer: string
 }
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
   return (
     <>
       <SiteLoader />
@@ -79,7 +82,7 @@ export default function Home() {
 
         <div className="absolute inset-0 z-0 bg-gradient-to-r from-white/80 via-transparent to-transparent" />
 
-        <Header variant="light" showHomeLink={false} />
+        <Header variant="light" />
 
         <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between px-6 md:px-12 lg:px-16 pt-24 md:pt-28 lg:pt-32 pb-20 lg:pb-0 min-h-screen lg:min-h-0">
           <motion.div
@@ -1389,16 +1392,18 @@ export default function Home() {
               viewport={{ once: true }}
               className="flex flex-col sm:flex-row gap-3 md:gap-4"
             >
-              <Link href="/contact">
-                <button className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-gray-900 font-semibold rounded-full overflow-hidden transition-all duration-300 shadow-lg hover:shadow-amber-500/30 hover:shadow-2xl text-sm md:text-base">
-                  <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
-                    <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    Book a Free Call
-                  </span>
-                </button>
-              </Link>
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="group relative px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-500 hover:to-amber-600 text-gray-900 font-semibold rounded-full overflow-hidden transition-all duration-300 shadow-lg hover:shadow-amber-500/30 hover:shadow-2xl text-sm md:text-base"
+              >
+                <span className="relative z-10 flex items-center justify-center gap-2 md:gap-3">
+                  <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  Book a Free Call
+                </span>
+              </button>
               
               <Link href="/about">
                 <button className="group px-6 md:px-8 py-3 md:py-4 bg-transparent border-2 border-white/30 hover:border-white text-white font-semibold rounded-full transition-all duration-300 hover:bg-white/10 text-sm md:text-base">
@@ -1501,6 +1506,13 @@ export default function Home() {
       </section>
 
       <Footer />
+
+      <ContactModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Book a free call"
+        description="Share your details and we'll schedule a consultation at your convenience."
+      />
     </>
   )
 }

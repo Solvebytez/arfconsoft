@@ -1,11 +1,13 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 import { Header } from "@/components/header"
+import { ContactModal } from "@/components/contact-modal"
 import {
   ArrowRight,
   MapPin,
@@ -25,48 +27,39 @@ import {
 const contactInfo = [
   {
     icon: Building2,
-    title: "Head Office - India",
+    title: "Head Office - Saudi Arabia",
     details: [
-      "S-11, Second Floor Jagdamba Tower",
-      "Amrapali Circle, Vaishali Nagar",
-      "Jaipur, Rajasthan 302021"
+      "Khurais Road Exit 28, Al Naseem,",
+      "Riyadh, 11421, Saudi Arabia"
     ],
   },
   {
     icon: MapPin,
-    title: "Office - USA",
+    title: "Office - India",
     details: [
-      "10685-B Hazelhurst Dr",
-      "Houston, TX 77043",
-      "United States"
+      "Pratap Vihar, Ghaziabad,",
+      "(U.P) - 201009, India"
     ],
   },
   {
     icon: Phone,
     title: "Phone Numbers",
     details: [
-      "+91 141 4567890 (India)",
-      "+1 713 456 7890 (USA)"
+      "+966 562467633 (Saudi Arabia)",
+      "+91-9599179795 (India)"
     ],
   },
   {
     icon: Mail,
     title: "Email Address",
     details: [
-      "info@advaitsoftech.com",
-      "sales@advaitsoftech.com"
+      "arafconinfo@gmail.com"
     ],
   },
 ]
 
-const supportHours = [
-  { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM IST" },
-  { day: "Saturday", hours: "10:00 AM - 4:00 PM IST" },
-  { day: "Sunday", hours: "Closed" },
-]
-
-
 export default function ContactPage() {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <>
       {/* Navigation */}
@@ -191,24 +184,6 @@ export default function ContactPage() {
                 ))}
               </div>
 
-              {/* Support Hours */}
-              <div className="bg-gray-900 rounded-2xl p-6">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 rounded-lg bg-[#25ABC4]/20 flex items-center justify-center">
-                    <Clock className="w-5 h-5 text-[#25ABC4]" />
-                  </div>
-                  <h3 className="font-semibold text-white">Support Hours</h3>
-                </div>
-                <div className="space-y-3">
-                  {supportHours.map((item) => (
-                    <div key={item.day} className="flex justify-between items-center">
-                      <span className="text-gray-400 text-sm">{item.day}</span>
-                      <span className="text-white text-sm font-medium">{item.hours}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               {/* Social Links */}
               <div className="bg-white rounded-2xl p-6 shadow-lg shadow-gray-100/50">
                 <h3 className="font-semibold text-gray-900 mb-4">Connect With Us</h3>
@@ -234,110 +209,6 @@ export default function ContactPage() {
               </div>
             </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Map Section */}
-      <section className="relative py-24 bg-gray-950 overflow-hidden">
-        {/* Vector Art - Globe */}
-        <div className="absolute top-16 left-12 hidden lg:block opacity-10">
-          <svg width="140" height="140" viewBox="0 0 140 140" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="70" cy="70" r="55" stroke="#25ABC4" strokeWidth="1.5" fill="none" />
-            <ellipse cx="70" cy="70" rx="25" ry="55" stroke="#25ABC4" strokeWidth="1" fill="none" />
-            <ellipse cx="70" cy="70" rx="45" ry="55" stroke="#25ABC4" strokeWidth="0.8" fill="none" opacity="0.5" />
-            <line x1="15" y1="50" x2="125" y2="50" stroke="#25ABC4" strokeWidth="0.8" opacity="0.4" />
-            <line x1="15" y1="90" x2="125" y2="90" stroke="#25ABC4" strokeWidth="0.8" opacity="0.4" />
-            <line x1="70" y1="15" x2="70" y2="125" stroke="#25ABC4" strokeWidth="0.8" opacity="0.3" />
-          </svg>
-        </div>
-
-        {/* Vector Art - Connected Dots */}
-        <div className="absolute bottom-20 right-16 hidden lg:block opacity-10">
-          <svg width="160" height="100" viewBox="0 0 160 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="20" cy="50" r="8" stroke="#25ABC4" strokeWidth="1.5" fill="none" />
-            <circle cx="80" cy="20" r="8" stroke="#25ABC4" strokeWidth="1.5" fill="none" />
-            <circle cx="80" cy="80" r="8" stroke="#25ABC4" strokeWidth="1.5" fill="none" />
-            <circle cx="140" cy="50" r="8" stroke="#25ABC4" strokeWidth="1.5" fill="none" />
-            <line x1="28" y1="46" x2="72" y2="24" stroke="#25ABC4" strokeWidth="1" opacity="0.5" />
-            <line x1="28" y1="54" x2="72" y2="76" stroke="#25ABC4" strokeWidth="1" opacity="0.5" />
-            <line x1="88" y1="24" x2="132" y2="46" stroke="#25ABC4" strokeWidth="1" opacity="0.5" />
-            <line x1="88" y1="76" x2="132" y2="54" stroke="#25ABC4" strokeWidth="1" opacity="0.5" />
-            <circle cx="20" cy="50" r="3" fill="#25ABC4" opacity="0.3" />
-            <circle cx="80" cy="20" r="3" fill="#25ABC4" opacity="0.3" />
-            <circle cx="80" cy="80" r="3" fill="#25ABC4" opacity="0.3" />
-            <circle cx="140" cy="50" r="3" fill="#25ABC4" opacity="0.3" />
-          </svg>
-        </div>
-
-        <div className="relative z-10 px-8 lg:px-16 max-w-7xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">Our Global Presence</h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">With offices in India and USA, we provide round-the-clock support and seamless collaboration across time zones.</p>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="grid md:grid-cols-2 gap-8"
-          >
-            {/* India Office */}
-            <div className="group relative bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-[#25ABC4]/30 transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#25ABC4]/5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-500" />
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-[#25ABC4]/10 flex items-center justify-center">
-                    <Building2 className="w-7 h-7 text-[#25ABC4]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">India (Head Office)</h3>
-                    <p className="text-gray-500 text-sm">Jaipur, Rajasthan</p>
-                  </div>
-                </div>
-                <div className="bg-gray-800/50 rounded-2xl h-48 flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <MapPin className="w-10 h-10 text-[#25ABC4] mx-auto mb-2" />
-                    <p className="text-gray-400 text-sm">Interactive Map</p>
-                  </div>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  S-11, Second Floor Jagdamba Tower, Amrapali Circle, Vaishali Nagar, Jaipur, Rajasthan 302021
-                </p>
-              </div>
-            </div>
-
-            {/* USA Office */}
-            <div className="group relative bg-gray-900 border border-gray-800 rounded-3xl p-8 hover:border-[#25ABC4]/30 transition-all duration-300 overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#25ABC4]/5 rounded-full blur-2xl translate-x-1/2 -translate-y-1/2 group-hover:scale-150 transition-transform duration-500" />
-              <div className="relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-14 h-14 rounded-2xl bg-[#25ABC4]/10 flex items-center justify-center">
-                    <Globe className="w-7 h-7 text-[#25ABC4]" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">United States</h3>
-                    <p className="text-gray-500 text-sm">Houston, Texas</p>
-                  </div>
-                </div>
-                <div className="bg-gray-800/50 rounded-2xl h-48 flex items-center justify-center mb-6">
-                  <div className="text-center">
-                    <MapPin className="w-10 h-10 text-[#25ABC4] mx-auto mb-2" />
-                    <p className="text-gray-400 text-sm">Interactive Map</p>
-                  </div>
-                </div>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  10685-B Hazelhurst Dr, Houston, TX 77043, United States
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
@@ -447,19 +318,30 @@ export default function ContactPage() {
               Schedule a free consultation call with our experts. We'll discuss your requirements and provide a customized solution roadmap.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact">
-                <Button className="h-14 px-8 rounded-full bg-white text-[#25ABC4] hover:bg-gray-100 font-semibold text-base transition-all duration-300">
-                  Schedule a Call
-                  <ArrowRight className="w-5 h-5 ml-2" />
+              <button
+                type="button"
+                onClick={() => setIsModalOpen(true)}
+                className="h-14 px-8 rounded-full bg-white text-[#25ABC4] hover:bg-gray-100 font-semibold text-base transition-all duration-300 flex items-center justify-center"
+              >
+                Schedule a Call
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </button>
+              <Link href="/portfolio">
+                <Button variant="outline" className="h-14 px-8 rounded-full border-2 border-white/30 bg-transparent text-white hover:bg-white/10 font-semibold text-base transition-all duration-300">
+                  View Our Work
                 </Button>
               </Link>
-              <Button variant="outline" className="h-14 px-8 rounded-full border-2 border-white/30 bg-transparent text-white hover:bg-white/10 font-semibold text-base transition-all duration-300">
-                View Our Work
-              </Button>
             </div>
           </motion.div>
         </div>
       </section>
+
+      <ContactModal
+        open={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title="Book a free call"
+        description="Share your details and we'll schedule a consultation at your convenience."
+      />
 
       <Footer />
     </>

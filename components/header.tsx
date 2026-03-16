@@ -1,10 +1,12 @@
 "use client"
 
+import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { usePathname } from "next/navigation"
+import { ContactModal } from "@/components/contact-modal"
 
 type HeaderVariant = "dark" | "light"
 
@@ -15,6 +17,7 @@ interface HeaderProps {
 
 export function Header({ variant = "dark", showHomeLink = true }: HeaderProps) {
   const pathname = usePathname()
+  const [isContactOpen, setIsContactOpen] = useState(false)
 
   const isActive = (path: string) => {
     if (path === "/" && pathname === "/") return true
@@ -80,7 +83,7 @@ export function Header({ variant = "dark", showHomeLink = true }: HeaderProps) {
               href="/services" 
               className={`cursor-pointer transition-all duration-300 ${isActive("/services") ? "text-[#25ABC4]" : "hover:text-[#25ABC4]"}`}
             >
-              Services
+              Service
             </Link>
           </li>
           <li>
@@ -93,18 +96,18 @@ export function Header({ variant = "dark", showHomeLink = true }: HeaderProps) {
           </li>
           <li>
             <Link 
-              href="/contact" 
-              className={`cursor-pointer transition-all duration-300 ${isActive("/contact") ? "text-[#25ABC4]" : "hover:text-[#25ABC4]"}`}
-            >
-              Contact Us
-            </Link>
-          </li>
-          <li>
-            <Link 
               href="/careers" 
               className={`cursor-pointer transition-all duration-300 ${isActive("/careers") ? "text-[#25ABC4]" : "hover:text-[#25ABC4]"}`}
             >
               Careers
+            </Link>
+          </li>
+          <li>
+            <Link 
+              href="/contact" 
+              className={`cursor-pointer transition-all duration-300 ${isActive("/contact") ? "text-[#25ABC4]" : "hover:text-[#25ABC4]"}`}
+            >
+              Contact Us
             </Link>
           </li>
         </ul>
@@ -116,13 +119,22 @@ export function Header({ variant = "dark", showHomeLink = true }: HeaderProps) {
               </svg>
             </Link>
           )}
-          <Link href="/contact" className={variant === "light" && pathname === "/" ? "hidden sm:block" : ""}>
-            <Button className={buttonClasses}>
-              Get Started
-            </Button>
-          </Link>
+          <Button
+            type="button"
+            onClick={() => setIsContactOpen(true)}
+            className={`${buttonClasses} ${variant === "light" && pathname === "/" ? "hidden sm:block" : ""}`}
+          >
+            Get Started
+          </Button>
         </div>
       </div>
+
+      <ContactModal
+        open={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+        title="Get in touch"
+        description="Share your requirements and we'll get back to you shortly."
+      />
     </motion.nav>
   )
 }

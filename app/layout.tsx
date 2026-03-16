@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Saira } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Toaster } from "@/components/ui/sonner"
+import { WhatsAppFloat } from "@/components/whatsapp-float"
 import "./globals.css"
 
 const saira = Saira({
@@ -25,6 +26,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${saira.className} font-sans antialiased`}>
         {children}
+        <WhatsAppFloat />
         <Analytics />
         <Toaster />
       </body>

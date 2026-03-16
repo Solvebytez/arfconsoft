@@ -55,7 +55,7 @@ export function Footer() {
               {[
                 { label: "About Us", href: "/about" },
                 { label: "Services", href: "/services" },
-                { label: "Portfolio", href: "#" },
+                { label: "Portfolio", href: "/portfolio" },
                 { label: "Careers", href: "/careers" },
               ].map((link) => (
                 <li key={link.label}>
@@ -86,12 +86,12 @@ export function Footer() {
             <h4 className="text-white font-semibold mb-6">Contact Info</h4>
             <ul className="space-y-4">
               <li>
-                <p className="text-[#25ABC4] text-xs font-semibold mb-1">HEAD OFFICE</p>
-                <p className="text-gray-400 text-sm leading-relaxed">S-11, Second Floor Jagdamba Tower, Amrapali Circle, Vaishali Nagar, Jaipur, Rajasthan 302021 India</p>
+                <p className="text-[#25ABC4] text-xs font-semibold mb-1">HEAD OFFICE - SAUDI ARABIA</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Khurais Road Exit 28, Al Naseem, Riyadh 11421, Saudi Arabia</p>
               </li>
               <li>
-                <p className="text-[#25ABC4] text-xs font-semibold mb-1">OFFICE IN USA</p>
-                <p className="text-gray-400 text-sm leading-relaxed">10685-B Hazelhurst Dr Houston, TX 77043</p>
+                <p className="text-[#25ABC4] text-xs font-semibold mb-1">OFFICE - INDIA</p>
+                <p className="text-gray-400 text-sm leading-relaxed">Pratap Vihar, Ghaziabad, (U.P) - 201009, India</p>
               </li>
             </ul>
           </div>
