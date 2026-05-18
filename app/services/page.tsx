@@ -86,7 +86,7 @@ const services = [
   {
     icon: Blocks,
     title: "Blockchain",
-    description: "Advait Softech is a distinguished leader as a blockchain development company. Our esteemed company is dedicated to delivering exceptional solutions tailored to meet your business needs. With a commitment to excellence, innovation, and professionalism.",
+    description: "Arafcon Soft is a distinguished leader as a blockchain development company. Our esteemed company is dedicated to delivering exceptional solutions tailored to meet your business needs. With a commitment to excellence, innovation, and professionalism.",
     color: "from-violet-500 to-purple-600",
     bgColor: "bg-violet-50",
     accentColor: "bg-violet-500"
@@ -126,7 +126,7 @@ const services = [
   {
     icon: Megaphone,
     title: "Digital Marketing",
-    description: "Advait Softech has enough expertise in rendering the top notch digital marketing services to our clients. Today's age is digital one. Hence, a business can better achieve its goals and objectives by digital platform only.",
+    description: "Arafcon Soft has enough expertise in rendering the top notch digital marketing services to our clients. Today's age is digital one. Hence, a business can better achieve its goals and objectives by digital platform only.",
     color: "from-orange-500 to-amber-600",
     bgColor: "bg-orange-50",
     accentColor: "bg-orange-500"
@@ -346,7 +346,7 @@ export default function ServicesPage() {
                         <Blocks className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-3">Blockchain</h3>
-                      <p className="text-white/80 leading-relaxed">Advait Softech is a distinguished leader as a blockchain development company. Our esteemed company is dedicated to delivering exceptional solutions tailored to meet your business needs.</p>
+                      <p className="text-white/80 leading-relaxed">Arafcon Soft is a distinguished leader as a blockchain development company. Our esteemed company is dedicated to delivering exceptional solutions tailored to meet your business needs.</p>
                     </div>
                     <div className="flex items-center gap-2 mt-6 text-white/60 group-hover:text-white transition-colors duration-300">
                       <span className="text-sm font-medium">Explore</span>
@@ -455,7 +455,7 @@ export default function ServicesPage() {
                         <Megaphone className="w-8 h-8 text-white" />
                       </div>
                       <h3 className="text-3xl font-bold text-white mb-3">Digital Marketing</h3>
-                      <p className="text-white/80 leading-relaxed">Advait Softech has enough expertise in rendering the top notch digital marketing services. Today's age is digital one. Hence, a business can better achieve its goals and objectives by digital platform only.</p>
+                      <p className="text-white/80 leading-relaxed">Arafcon Soft has enough expertise in rendering the top notch digital marketing services. Today's age is digital one. Hence, a business can better achieve its goals and objectives by digital platform only.</p>
                     </div>
                     <div className="flex items-center gap-2 mt-6 text-white/60 group-hover:text-white transition-colors duration-300">
                       <span className="text-sm font-medium">Explore</span>
@@ -576,7 +576,7 @@ export default function ServicesPage() {
                     ))}
                   </div>
                   <p className="text-white text-lg leading-relaxed mb-6">
-                    "Working with Advait Softech has been transformative for our business. Their blockchain solutions helped us streamline operations and reduce costs by 40%."
+                    "Working with Arafcon Soft has been transformative for our business. Their blockchain solutions helped us streamline operations and reduce costs by 40%."
                   </p>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-lg">
@@ -764,7 +764,7 @@ export default function ServicesPage() {
               <div className="w-8 h-1 bg-[#25ABC4] rounded-full" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              The Advait Softech Advantage
+              The Arafcon Soft Advantage
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               We combine technical excellence with a client-first approach to deliver solutions that drive real business results

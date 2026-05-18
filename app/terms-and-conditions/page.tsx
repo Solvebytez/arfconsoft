@@ -51,7 +51,7 @@ export default function TermsAndConditionsPage() {
               className="mb-12"
             >
               <p className="text-gray-600 leading-relaxed">
-                Welcome to Advait Softech. These Terms and Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms. Please read them carefully before engaging our services.
+                Welcome to Arafcon Soft. These Terms and Conditions govern your use of our website and services. By accessing or using our services, you agree to be bound by these terms. Please read them carefully before engaging our services.
               </p>
             </motion.div>
 
@@ -176,8 +176,8 @@ export default function TermsAndConditionsPage() {
               <p className="text-gray-400 mb-4">
                 If you have any questions about these Terms and Conditions, please contact us at:
               </p>
-              <a href="mailto:legal@advaitsoftech.com" className="text-[#25ABC4] hover:underline font-medium">
-                legal@advaitsoftech.com
+              <a href="mailto:legal@arafconsoft.com" className="text-[#25ABC4] hover:underline font-medium">
+                legal@arafconsoft.com
               </a>
             </motion.div>
 

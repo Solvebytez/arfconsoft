@@ -507,7 +507,7 @@ export default function DigitalMarketingPage() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <span className="text-orange-500 font-semibold text-sm tracking-widest uppercase">Why Advait Softech</span>
+            <span className="text-orange-500 font-semibold text-sm tracking-widest uppercase">Why Arafcon Soft</span>
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mt-3">Results That Speak</h2>
           </motion.div>
 

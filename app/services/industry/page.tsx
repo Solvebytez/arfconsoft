@@ -167,7 +167,7 @@ export default function IndustryServicePage() {
                 </span>
               </h1>
               <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-lg">
-                Advait Softech delivers cutting-edge digital transformation for
+                Arafcon Soft delivers cutting-edge digital transformation for
                 manufacturing and production industries, providing businesses
                 with the utmost opportunities to stay a step ahead.
               </p>

@@ -12,7 +12,7 @@ const saira = Saira({
 })
 
 export const metadata: Metadata = {
-  title: "Arfconsoft - Innovative Technology Solutions",
+  title: "Arafcon Soft - Innovative Technology Solutions",
   description: "Transform your business with innovative technology solutions. We deliver scalable, secure, and efficient software tailored to your needs.",
   generator: "v0.app",
 }

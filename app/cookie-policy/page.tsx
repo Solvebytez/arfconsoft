@@ -51,7 +51,7 @@ export default function CookiePolicyPage() {
               className="mb-12"
             >
               <p className="text-gray-600 leading-relaxed">
-                This Cookie Policy explains how Advait Softech uses cookies and similar tracking technologies when you visit our website. We use cookies to enhance your browsing experience, analyze website traffic, and understand where our visitors come from.
+                This Cookie Policy explains how Arafcon Soft uses cookies and similar tracking technologies when you visit our website. We use cookies to enhance your browsing experience, analyze website traffic, and understand where our visitors come from.
               </p>
             </motion.div>
 
@@ -237,8 +237,8 @@ export default function CookiePolicyPage() {
               <p className="text-gray-400 mb-4">
                 If you have any questions about our use of cookies, please contact us at:
               </p>
-              <a href="mailto:privacy@advaitsoftech.com" className="text-[#25ABC4] hover:underline font-medium">
-                privacy@advaitsoftech.com
+              <a href="mailto:privacy@arafconsoft.com" className="text-[#25ABC4] hover:underline font-medium">
+                privacy@arafconsoft.com
               </a>
             </motion.div>
 

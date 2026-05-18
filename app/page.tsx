@@ -155,7 +155,7 @@ export default function Home() {
           >
             <p className="text-xs md:text-sm font-semibold uppercase tracking-wider text-[#25ABC4] mb-3">WHO ARE WE</p>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              About <span className="text-[#25ABC4]">Advait Softech</span>
+              About <span className="text-[#25ABC4]">Arafcon Soft</span>
             </h2>
             <p className="text-gray-600 max-w-2xl text-sm md:text-base">
               A Global IT Consulting And Software Development Company Specializing In Building Reliable And Scalable
@@ -210,7 +210,7 @@ export default function Home() {
                   Unlock The Potential Of Your Business.
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                  Advait Softech Is A Global IT Consulting And Software Development Company Specializing In Building
+                  Arafcon Soft Is A Global IT Consulting And Software Development Company Specializing In Building
                   Reliable And Scalable Digital Solutions. Established In 2014, We Partner With Businesses Across
                   Industries To Support Their Digital Transformation Initiatives.
                 </p>

@@ -51,7 +51,7 @@ export default function PrivacyPolicyPage() {
               className="mb-12"
             >
               <p className="text-gray-600 leading-relaxed">
-                At Advait Softech, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+                At Arafcon Soft, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
               </p>
             </motion.div>
 
@@ -158,8 +158,8 @@ export default function PrivacyPolicyPage() {
               <p className="text-gray-400 mb-4">
                 If you have any questions about this Privacy Policy, please contact us at:
               </p>
-              <a href="mailto:privacy@advaitsoftech.com" className="text-[#25ABC4] hover:underline font-medium">
-                privacy@advaitsoftech.com
+              <a href="mailto:privacy@arafconsoft.com" className="text-[#25ABC4] hover:underline font-medium">
+                privacy@arafconsoft.com
               </a>
             </motion.div>
 

@@ -133,7 +133,7 @@ export default function AboutPage() {
             >
               <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-[#25ABC4]/10 border border-[#25ABC4]/30 rounded-full mb-4 md:mb-6">
                 <span className="w-2 h-2 bg-[#25ABC4] rounded-full animate-pulse" />
-                <span className="text-[#25ABC4] text-xs md:text-sm font-medium">About Advait Softech</span>
+                <span className="text-[#25ABC4] text-xs md:text-sm font-medium">About Arafcon Soft</span>
               </div>
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold text-white leading-tight mb-4 md:mb-6">
                 Transforming Ideas Into{" "}
@@ -271,7 +271,7 @@ export default function AboutPage() {
                 A Journey of Innovation & Growth
               </h2>
               <p className="text-gray-600 text-base md:text-lg leading-relaxed mb-4 md:mb-6">
-                Founded in 2012 in Jaipur, India, Advait Softech began with a simple mission: to help businesses harness the power of technology. What started as a small team of passionate developers has grown into a global technology partner trusted by companies across continents.
+                Founded in 2012 in Jaipur, India, Arafcon Soft began with a simple mission: to help businesses harness the power of technology. What started as a small team of passionate developers has grown into a global technology partner trusted by companies across continents.
               </p>
               <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6 md:mb-8">
                 Today, with offices in India and the USA, we continue to push boundaries and deliver innovative solutions that drive real business value. Our commitment to excellence, combined with our deep technical expertise, has made us a preferred partner for organizations ranging from ambitious startups to Fortune 500 companies.

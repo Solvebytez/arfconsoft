@@ -203,7 +203,7 @@ export default function BlockchainPage() {
               transition={{ duration: 0.8, delay: 0.7 }}
               className="text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed"
             >
-              Advait Softech is a distinguished leader in blockchain
+              Arafcon Soft is a distinguished leader in blockchain
               development, delivering decentralized solutions that transform
               business operations with transparency, security, and efficiency.
             </motion.p>
@@ -519,7 +519,7 @@ export default function BlockchainPage() {
                 Blockchain Software Development for Industries
               </h2>
               <p className="text-gray-600 leading-relaxed">
-                Advait Softech's commitment to excellence ensures robust, future-ready custom blockchain development solutions that meet industry-specific demands.
+                Arafcon Soft's commitment to excellence ensures robust, future-ready custom blockchain development solutions that meet industry-specific demands.
               </p>
             </motion.div>
             <motion.div

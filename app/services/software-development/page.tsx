@@ -492,7 +492,7 @@ export default function SoftwareDevelopmentPage() {
             className="text-center mb-16"
           >
             <span className="text-rose-500 font-semibold text-sm tracking-widest uppercase mb-4 block">Why Us</span>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 text-balance">Why Choose Advait Softech</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 text-balance">Why Choose Arafcon Soft</h2>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

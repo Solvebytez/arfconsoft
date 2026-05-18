@@ -30,10 +30,10 @@ export function Footer() {
             </p>
             <div className="flex gap-4">
               {[
-                { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/advaitsoftech" },
-                { icon: Instagram, label: "Instagram", href: "https://instagram.com/advaitsoftech" },
-                { icon: Twitter, label: "Twitter", href: "https://twitter.com/advaitsoftech" },
-                { icon: Facebook, label: "Facebook", href: "https://facebook.com/advaitsoftech" },
+                { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com/company/arafconsoft" },
+                { icon: Instagram, label: "Instagram", href: "https://instagram.com/arafconsoft" },
+                { icon: Twitter, label: "Twitter", href: "https://twitter.com/arafconsoft" },
+                { icon: Facebook, label: "Facebook", href: "https://facebook.com/arafconsoft" },
               ].map((social) => (
                 <a
                   key={social.label}

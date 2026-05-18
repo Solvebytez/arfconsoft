@@ -183,7 +183,7 @@ export default function CareersPage() {
           >
             <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#25ABC4]/10 text-[#25ABC4] text-xs md:text-sm font-medium mb-3 md:mb-4">Why Join Us</span>
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 md:mb-4">Benefits & Perks</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">We believe in taking care of our team. Here's what you can expect when you join AdvaitSoftech.</p>
+            <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">We believe in taking care of our team. Here's what you can expect when you join Arafcon Soft.</p>
           </motion.div>
 
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
@@ -234,7 +234,7 @@ export default function CareersPage() {
               <span className="inline-block px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#25ABC4]/10 text-[#25ABC4] text-xs md:text-sm font-medium mb-3 md:mb-4">Our Culture</span>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 md:mb-6">A Place Where You Belong</h2>
               <p className="text-gray-400 leading-relaxed mb-4 md:mb-6 text-sm md:text-base">
-                At AdvaitSoftech, we've built a culture that values collaboration, innovation, and personal growth. We believe that when our team thrives, our clients succeed.
+                At Arafcon Soft, we've built a culture that values collaboration, innovation, and personal growth. We believe that when our team thrives, our clients succeed.
               </p>
               <ul className="space-y-3 md:space-y-4">
                 {[

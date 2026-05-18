@@ -487,7 +487,7 @@ export default function SalesforceDevelopmentPage() {
               <span className="text-teal-400 font-medium uppercase tracking-wider text-sm">Why Us</span>
               <div className="w-8 h-1 bg-teal-500 rounded-full" />
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Why Choose Advait Softech</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-4">Why Choose Arafcon Soft</h2>
             <p className="text-gray-400 max-w-2xl mx-auto leading-relaxed">Trusted Salesforce expertise backed by certified professionals and a track record of delivering excellence.</p>
           </motion.div>
 

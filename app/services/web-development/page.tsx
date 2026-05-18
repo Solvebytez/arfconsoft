@@ -686,7 +686,7 @@ export default function WebDevelopmentPage() {
                 <span className="text-cyan-600 font-medium uppercase tracking-wider text-sm">Why Us</span>
               </div>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
-                Why Choose Advait Softech
+                Why Choose Arafcon Soft
               </h2>
             </div>
             <p className="text-gray-600 max-w-md lg:text-right leading-relaxed">
